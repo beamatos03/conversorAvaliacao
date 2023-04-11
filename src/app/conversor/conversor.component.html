@@ -12,7 +12,7 @@
           <label>Converter para: </label>
         </div>
         <div class="col-md-6">
-            <select class="form-select" aria-label="Default select example" (change)="moedas($event.target.value)">
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="escolha" (ngModelChange)="moedas()">
                 <option selected>Escolha a moeda para a qual deseja converter</option>
                 <option value="CAD">Dólar (CAD)</option>
                 <option value="KRW">Won Sul Coreano (KRW)</option>
@@ -26,7 +26,7 @@
   
     <div class="row mt-1 text-center">
         <div class="col-md-6 mt-1">
-            <button class="btn btn-secondary" (click)="calc()">Calcular</button>
+          <button class="btn btn-secondary" (click)="moedas()">Calcular</button>
         </div>
     </div>
     <div class="row">
@@ -34,7 +34,7 @@
         <label class="mt-1">Resultado: </label>
         </div>
         <div class="col-md-6">
-            <input class="form-control form-control-sm m-1 bg-secondary text-light" type="number" [value]="resultado" readonly>
+            <input class="form-control form-control-sm m-1 bg-secondary text-light" type="string" [value]="resultado" readonly>
           </div>
   
     </div>

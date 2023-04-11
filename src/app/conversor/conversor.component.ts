@@ -8,20 +8,21 @@ import { Component } from '@angular/core';
 export class ConversorComponent {
   moeda : number = 0;
   valor : number = 0;
- resultado : string = ""
+ escolha : string = "";
+ resultado : string = "";
 
 
 
- moedas(value: string){
-  switch(value) {
+ moedas(){
+  switch(this.escolha) {
     case "CAD":
-       // if modo 1 is selected do something.
+       this.resultado = this.escolha;
        break;
     case "MXN":
-       // if modo 2 is selected do something.
+      this.resultado = this.escolha;
        break;
     case "KRW":
-       // if modo 3 is selected do something.
+      this.resultado = this.escolha;
        break;
   }
-}
+ }}
