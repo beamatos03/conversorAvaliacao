@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./conversor.component.css']
 })
 export class ConversorComponent {
-  moeda : number = 0;
+  moeda : string = "";
   valor : number = 0;
   cambio: number = 0;
  escolha : string = "";
@@ -15,22 +15,10 @@ export class ConversorComponent {
 
 
 
- calculaCAD(){
-  var resultado = this.valor/this.cambio;
-  this.resultado = "O resultado da conversão de BRL para Dolares canadenses é: CAD " + resultado.toFixed(2);
- }
-
- calculaKRW(){
-  var resultado = this.valor/this.cambio;
-  this.resultado = "O resultado da conversão de BRL para Wons Sul Coreanos é: WON " + resultado.toFixed(2);
- }
-
- calculaBRL(){
-  var resultado = this.valor/this.cambio;
-  this.resultado = "O resultado da conversão de BRL para Dolares canadenses é: CAD " + resultado.toFixed(2);
-
- }
-   
+ calcular(){
+  var resultado = this.valor*this.cambio;
+  this.resultado = "O resultado da conversão de BRL para " + this.moeda + ": " + resultado.toFixed(2);
+ } 
 
 
 }

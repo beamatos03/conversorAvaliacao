@@ -7,6 +7,10 @@
           <div class="col-md-6"><label>Valor em real (BRL): </label></div>
           <div class="col-md-6"><input placeholder="EX: 12,50" class="form-control form-control-sm m-1" type="number" name="valor" [(ngModel)]="valor"></div>
         </div>
+        <div class="row">
+            <div class="col-md-6"><label>Moeda: </label></div>
+            <div class="col-md-6"><input placeholder="Ex: dolar" class="form-control form-control-sm m-1" type="string" name="moeda" [(ngModel)]="moeda"></div>
+        </div>
       <div class="row">
         <div class="col-md-6">
             <label>Valor atual do câmbio: </label>
@@ -21,13 +25,7 @@
   
     <div class="row mt-1 text-center">
         <div class="col-md-4 mt-1">
-          <button class="btn btn-secondary" (click)="calculaCAD()">Real (BRL) para Dolar (CAD)</button>
-        </div>
-        <div class="col-md-4 mt-1">
-            <button class="btn btn-secondary" (click)="calculaKRW()">Real (BRL) para Korean Won (KRW)</button>
-          </div>
-          <div class="col-md-4 mt-1">
-            <button class="btn btn-secondary" (click)="calculaBRL()">Dolar (CAD) para Real (BRL)</button>
+            <button class="btn btn-secondary" (click)="calcular()">CALCULAR</button>
           </div>
     </div>
     <div class="row my-3">
