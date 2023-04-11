@@ -1,1 +1,40 @@
-<p>conversor works!</p>
+<div class="col-md-6 d-flex flex-column bg-light text-dark p-4 rounded border">
+
+    <h2 class="text-center">CONVERSOR DE MOEDAS</h2>
+    <form action="">
+      <div class="justify-content-center mt-3">
+        <div class="row">
+          <div class="col-md-6"><label>Valor em real (BRL): </label></div>
+          <div class="col-md-6"><input placeholder="EX: 12,50" class="form-control form-control-sm m-1" type="number" name="peso" [(ngModel)]="valor"></div>
+        </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label>Converter para: </label>
+        </div>
+        <div class="col-md-6">
+            <select class="form-select" aria-label="Default select example" (change)="moedas($event.target.value)">
+                <option selected>Escolha a moeda para a qual deseja converter</option>
+                <option value="CAD">Dólar (CAD)</option>
+                <option value="KRW">Won Sul Coreano (KRW)</option>
+                <option value="MXN">Peso Mexicano (MXN)</option>
+              </select>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+    <div class="row mt-1 text-center">
+        <div class="col-md-6 mt-1">
+            <button class="btn btn-secondary" (click)="calc()">Calcular</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+        <label class="mt-1">Resultado: </label>
+        </div>
+        <div class="col-md-6">
+            <input class="form-control form-control-sm m-1 bg-secondary text-light" type="number" [value]="resultado" readonly>
+          </div>
+  
+    </div>
