@@ -1,5 +1,3 @@
-<div class="col-md-6 d-flex flex-column bg-light text-dark p-4 rounded border">
-
     <h2 class="text-center">CONVERSOR DE MOEDAS</h2>
     <form action="">
       <div class="justify-content-center mt-3">
@@ -24,16 +22,15 @@
     </div>
   
     <div class="row mt-1 text-center">
-        <div class="col-md-4 mt-1">
+        <div class="mt-1 w-100">
             <button class="btn btn-secondary" (click)="calcular()">CALCULAR</button>
           </div>
     </div>
     <div class="row my-3">
-        <div class="col-md-4">
-        <label class="mt-1">Resultado: </label>
-        </div>
-        <div class="col-md-8">
+        <label class="mt-1">Resultado: </label></div>
+        <div class="row">
+        <div class="w-100">
             <input class="form-control form-control-sm m-1 bg-secondary text-light" type="string" [value]="resultado" readonly>
           </div>
+        </div>
   
-    </div>

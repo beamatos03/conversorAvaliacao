@@ -16,7 +16,7 @@ export class ConversorComponent {
 
 
  calcular(){
-  var resultado = this.valor*this.cambio;
+  var resultado = this.valor/this.cambio;
   this.resultado = "O resultado da conversão de BRL para " + this.moeda + ": " + resultado.toFixed(2);
  } 
 
