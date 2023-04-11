@@ -5,35 +5,36 @@
       <div class="justify-content-center mt-3">
         <div class="row">
           <div class="col-md-6"><label>Valor em real (BRL): </label></div>
-          <div class="col-md-6"><input placeholder="EX: 12,50" class="form-control form-control-sm m-1" type="number" name="peso" [(ngModel)]="valor"></div>
+          <div class="col-md-6"><input placeholder="EX: 12,50" class="form-control form-control-sm m-1" type="number" name="valor" [(ngModel)]="valor"></div>
         </div>
       <div class="row">
         <div class="col-md-6">
-          <label>Converter para: </label>
-        </div>
-        <div class="col-md-6">
-            <select class="form-select" aria-label="Default select example" [(ngModel)]="escolha" (ngModelChange)="moedas()">
-                <option selected>Escolha a moeda para a qual deseja converter</option>
-                <option value="CAD">Dólar (CAD)</option>
-                <option value="KRW">Won Sul Coreano (KRW)</option>
-                <option value="MXN">Peso Mexicano (MXN)</option>
-              </select>
-        </div>
+            <label>Valor atual do câmbio: </label>
+          </div>
+          <div class="col-md-6">
+              <input placeholder="EX: 12,50" class="form-control form-control-sm m-1" type="number" name="cambio" [(ngModel)]="cambio">
+          </div>
   
       </div>
   
     </div>
   
     <div class="row mt-1 text-center">
-        <div class="col-md-6 mt-1">
-          <button class="btn btn-secondary" (click)="moedas()">Calcular</button>
+        <div class="col-md-4 mt-1">
+          <button class="btn btn-secondary" (click)="calculaCAD()">Real (BRL) para Dolar (CAD)</button>
         </div>
+        <div class="col-md-4 mt-1">
+            <button class="btn btn-secondary" (click)="calculaKRW()">Real (BRL) para Korean Won (KRW)</button>
+          </div>
+          <div class="col-md-4 mt-1">
+            <button class="btn btn-secondary" (click)="calculaBRL()">Dolar (CAD) para Real (BRL)</button>
+          </div>
     </div>
-    <div class="row">
-        <div class="col-md-6">
+    <div class="row my-3">
+        <div class="col-md-4">
         <label class="mt-1">Resultado: </label>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <input class="form-control form-control-sm m-1 bg-secondary text-light" type="string" [value]="resultado" readonly>
           </div>
   
