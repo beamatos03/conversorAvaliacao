@@ -92,9 +92,14 @@
             ],
             "scripts": []
           }
-        }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/conversorAvaliacao/"
+          }
       }
-    }
+    }}
   },
   "cli": {
     "analytics": "1fe19b17-fdc6-47f4-a260-12e4e4500fe2"
